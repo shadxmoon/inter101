@@ -1,0 +1,36 @@
+.btn--open{
+    background-color: rgb(110, 33, 33);
+    color: #ffffff;
+    font-size: 18px;
+}
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(94, 94, 94, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    opacity: 0;
+    transform: scale(1.5);
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+
+}
+.modal__wrapper{
+    padding: 30px;
+    background-color: #ffffff;
+    max-width: 600px;
+    width: 70%;
+    border-radius: 20px;
+    text-align: center;
+}
+.modal--open{
+    display: flex;
+    pointer-events: auto;
+    opacity: 1;
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}

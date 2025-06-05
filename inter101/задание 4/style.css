@@ -1,0 +1,32 @@
+.accordeon__question{
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    margin: 0;
+    color: darkblue;
+    background-color: #ffff;
+    cursor: pointer;
+    font-size: 18px;
+}
+.accordeon__question::after{
+    content: '\25BC';
+    font-size: 14px;
+    transition: transform 0.3s ease;
+}
+.accordeon__answer{
+    padding-top: 10px;
+    font-size: 14px;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.3s ease, max-height 0.3s ease;
+    opacity: 0;
+}
+.accordeon__question--active::after{
+    transform: rotate(180deg);
+    transition: transform 0.3s ease;
+}
+.accordeon__answer--visible{
+    opacity: 1;
+}
